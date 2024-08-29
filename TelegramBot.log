@@ -1,0 +1,19 @@
+[08/29/2024 04:50:49 PM:pyrogram.dispatcher:253:ERROR] Telegram says: [420 FLOOD_WAIT_X] - A wait of 8 seconds is required (caused by "messages.EditMessage")
+Traceback (most recent call last):
+  File "D:\Bots\My Bot\A-F-bot\AutofilterAdvanceBot\AutoFilterAdvanceBot-v1\.venv\lib\site-packages\pyrogram\dispatcher.py", line 240, in handler_worker
+    await handler.callback(self.client, *args)
+  File "d:\Bots\My Bot\A-F-bot\AutofilterAdvanceBot\AutoFilterAdvanceBot-v1\plugins\pm_filter.py", line 122, in next_page
+    await query.edit_message_reply_markup(
+  File "D:\Bots\My Bot\A-F-bot\AutofilterAdvanceBot\AutoFilterAdvanceBot-v1\.venv\lib\site-packages\pyrogram\types\bots_and_keyboards\callback_query.py", line 304, in edit_message_reply_markup
+    return await self._client.edit_message_reply_markup(
+  File "D:\Bots\My Bot\A-F-bot\AutofilterAdvanceBot\AutoFilterAdvanceBot-v1\.venv\lib\site-packages\pyrogram\methods\messages\edit_message_reply_markup.py", line 63, in edit_message_reply_markup
+    r = await self.invoke(
+  File "D:\Bots\My Bot\A-F-bot\AutofilterAdvanceBot\AutoFilterAdvanceBot-v1\.venv\lib\site-packages\pyrogram\methods\advanced\invoke.py", line 79, in invoke
+    r = await self.session.invoke(
+  File "D:\Bots\My Bot\A-F-bot\AutofilterAdvanceBot\AutoFilterAdvanceBot-v1\.venv\lib\site-packages\pyrogram\session\session.py", line 389, in invoke
+    return await self.send(query, timeout=timeout)
+  File "D:\Bots\My Bot\A-F-bot\AutofilterAdvanceBot\AutoFilterAdvanceBot-v1\.venv\lib\site-packages\pyrogram\session\session.py", line 357, in send
+    RPCError.raise_it(result, type(data))
+  File "D:\Bots\My Bot\A-F-bot\AutofilterAdvanceBot\AutoFilterAdvanceBot-v1\.venv\lib\site-packages\pyrogram\errors\rpc_error.py", line 91, in raise_it
+    raise getattr(
+pyrogram.errors.exceptions.flood_420.FloodWait: Telegram says: [420 FLOOD_WAIT_X] - A wait of 8 seconds is required (caused by "messages.EditMessage")
