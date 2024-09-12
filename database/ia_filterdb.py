@@ -50,7 +50,7 @@ async def save_file(media):
         )
     except ValidationError:
         logger.exception('Error occurred while saving file in database')
-        return False, 2
+        return False, None
     else:
         try:
             await file.commit()
@@ -59,10 +59,10 @@ async def save_file(media):
                 f'{getattr(media, "file_name", "NO_FILE")} is already saved in database'
             )
 
-            return False, 0
+            return False, file_id
         else:
             logger.info(f'{getattr(media, "file_name", "NO_FILE")} is saved to database')
-            return True, 1
+            return True, file_id
 
 
 
